@@ -1,0 +1,62 @@
+<!-- 1. الخلفية المعتمة -->
+<div class="modal-backdrop fade show" 
+     *ngIf="isModalOpen" 
+     (click)="closeModal()"></div>
+
+<!-- 2. المودال مع إدارة الحالة -->
+<div class="modal fade" 
+     [class.show]="isModalOpen" 
+     [style.display]="isModalOpen ? 'block' : 'none'"
+     tabindex="-1"
+     (keydown)="onKeydown($event)"
+     (click)="closeModal()">
+     
+  <!-- 3. منع الإغلاق عند النقر داخل المحتوى -->
+  <div class="modal-dialog modal-dialog-centered" (click)="onModalContentClick($event)">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- 4. عنوان ديناميكي -->
+        <h5 class="modal-title">{{ editData.title }}</h5>
+        
+        <!-- 5. زر الإغلاق بـ Angular -->
+        <button type="button" 
+                class="btn-close" 
+                (click)="closeModal()" 
+                aria-label="إغلاق"></button>
+      </div>
+      
+      <div class="modal-body">
+        <!-- 6. حقل الإدخال مع two-way binding -->
+        <div class="mb-3">
+          <label class="form-label">النص:</label>
+          <textarea 
+            class="form-control" 
+            [(ngModel)]="editData.value" 
+            rows="4"
+            placeholder="اكتب النص هنا..."
+            autofocus>
+          </textarea>
+        </div>
+        
+        <!-- 7. معاينة فورية -->
+        <div class="mb-3" *ngIf="editData.value">
+          <label class="form-label">المعاينة:</label>
+          <div class="preview-box p-2 border rounded bg-light">
+            {{ editData.value }}
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <!-- 8. أزرار بـ Angular events -->
+        <button type="button" 
+                class="btn btn-secondary" 
+                (click)="closeModal()">إلغاء</button>
+                
+        <button type="button" 
+                class="btn btn-primary" 
+                (click)="saveChanges()">حفظ التغييرات</button>
+      </div>
+    </div>
+  </div>
+</div>

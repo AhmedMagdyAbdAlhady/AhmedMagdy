@@ -1,0 +1,58 @@
+/* Counter Section */
+.block-18 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #191919;
+    padding: 30px 20px;
+    border-radius: 5px;
+}
+
+.text .number {
+    font-weight: 700;
+    font-size: 30px;
+    color: #ffbd39;
+    display: block;
+}
+
+.text span {
+    display: block;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.mb-10 {
+    margin-bottom: 10rem !important;
+
+}
+
+h2 {
+    font-family: "Poppins", Arial, sans-serif;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+p {
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #999999;
+}
+
+.counter-style {
+    z-index: 1000;
+}
+
+@media (max-width: 767.98px) {
+    .counter-style {
+        position: static !important;
+        transform: translate(0, 0) !important;
+    }
+
+    .mb-10 {
+        margin-bottom: 0rem !important;
+
+    }
+}

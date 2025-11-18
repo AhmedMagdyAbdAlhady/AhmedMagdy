@@ -1,0 +1,68 @@
+<div class="row justify-content-center align-items-center my-5">
+  <div class="col-12" data-aos="fade-right" data-aos-delay="100">
+    <div data-aos="fade-up" class="heading-section text-center">
+      <h1 class="big end-0">Resume</h1>
+      <h2><span class="text-orange">R</span>esume</h2>
+    </div>
+  </div>
+  <div class="col-12 d-flex justify-content-center">
+    <div class="row">
+      <div class="col-md-6">
+        <div
+          class="resume-wrap"
+          *ngFor="let items of rightResume"
+          data-aos="fade-down-right"
+          data-aos-delay="200"
+        >
+          <span class="date">{{ items.date }}</span>
+          <h2>{{ items.degree }}</h2>
+          <span class="position">{{ items.university }}</span>
+          <p class="mt-4">
+            {{ items.description }}
+          </p>
+        </div>
+        <!-- <div *ngIf="!rightResume" class="resume-wrap " data-aos="fade-right" data-aos-delay="200">
+          <span class="date">2014-2015</span>
+          <h2>Bachelor's Degree of C.A</h2>
+          <span class="position">Cambridge University</span>
+          <p class="mt-4">
+            A small river named Duden flows by their place and supplies it with the necessary
+            regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
+            your mouth.
+          </p>
+        </div> -->
+      </div>
+
+      <div class="col-md-6">
+        <div
+          class="resume-wrap"
+          *ngFor="let items of liftResume"
+          data-aos="fade-left"
+          data-aos-delay="200"
+        >
+          <span class="date">{{ items.date }}</span>
+          <h2>{{ items.degree }}</h2>
+          <span class="position">{{ items.university }}</span>
+          <p class="mt-4">
+            {{ items.description }}
+          </p>
+        </div>
+
+        <!-- <div class="resume-wrap " data-aos="fade-left" data-aos-delay="200">
+          <span class="date">2017-2018</span>
+          <h2>UI/UX Designer</h2>
+          <span class="position">Cambridge University</span>
+          <p class="mt-4">
+            A small river named Duden flows by their place and supplies it with the necessary
+            regelialia. It is a paradisematic country, in which roasted parts of sentences fly into
+            your mouth.
+          </p>
+        </div> -->
+      </div>
+    </div>
+    
+    <!-- <a href="assets/documents/resume.pdf" target="_blank" class="btn btn-primary btn-lg"
+      >Download Resume</a
+    > -->
+  </div>
+</div>

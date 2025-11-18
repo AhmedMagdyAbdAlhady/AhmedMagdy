@@ -1,0 +1,50 @@
+/* Projects Section */
+.project {
+    width: 100%;
+    height: 285px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: 0;
+    background: #ffbd39;
+    z-index: -1;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.project .text {
+    max-width: 80%;
+    z-index: 1;
+    opacity: 0;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+.project:hover .overlay {
+    opacity: .9;
+}
+
+.project:hover .text {
+    opacity: 1;
+}

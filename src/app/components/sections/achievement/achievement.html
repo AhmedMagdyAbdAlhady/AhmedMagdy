@@ -1,0 +1,42 @@
+<section class="mb-5 mb-10">
+  <div class="col-12 mb-5" data-aos="fade-down" data-aos-delay="100">
+    <div data-aos="fade-up" class="heading-section text-center">
+      <h1 class="big end-0">Achievement</h1>
+      <h2><span class="text-orange">M</span>y <span class="text-orange">A</span>chievement</h2>
+    </div>
+  </div>
+</section>
+<section class="position-relative ">
+  <div class="position-absolute top-0 start-50 translate-middle container counter-style">
+    <div class="row align-items-center">
+      <div
+        class="col-md d-flex justify-content-center counter-wrap mb-2"
+        *ngFor="let item of infoAchievement; let i = index"
+        data-aos="fade-up"
+        [attr.data-aos-delay]="(i + 1) * 100"
+      >
+        <div class="block-18">
+          <div class="text">
+            <strong><app-counter class="number" [target]="item.count">0</app-counter></strong>
+            <span>{{ item.title }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="ftco-section img margin-top" style="background-image: url(images/image.png)" data-aos="fade-up" data-aos-delay="100">
+    <div class="container" >
+      <div class="row justify-content-center">
+        <div class="col-md-7 text-center" data-aos="fade-up" data-aos-delay="200">
+          <h2>I'm <span class="text-orange">Available</span> for freelancing</h2>
+          <p>
+            A small river named Duden flows by their place and supplies it with the necessary
+            regelialia.
+          </p>
+          <p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">Hire me</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

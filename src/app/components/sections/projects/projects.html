@@ -1,0 +1,22 @@
+<div class="my-5">
+  <div class="col-12 mb-5" data-aos="fade-down" data-aos-delay="100">
+    <div data-aos="fade-up" class="heading-section text-center">
+      <h1 class="big end-0">Project</h1>
+      <h2><span class="text-orange">M</span>y <span class="text-orange">P</span>rojects</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let project of projects ; let i = index"  class="col-12 col-lg-{{project.col}}"  data-aos="fade-up" [attr.data-aos-delay]="(i + 1) * 100">
+      <div
+        class="project img  d-flex justify-content-center align-items-center"
+        style="background-image: url({{project.img}})"
+      >
+        <div class="overlay"></div>
+        <div class="text w-100 text-center top-50 start-50 translate-middle">
+          <h3 ><a class="text-white" href="{{project.link}}">{{project.description}}</a></h3>
+          <span>{{project.title}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+   .styled-text{
+    color: aquamarine;
+    display: inline-block;
+   }
+   .styled-text::first-letter {
+            color: #2196f3 !important;
+            
+        }

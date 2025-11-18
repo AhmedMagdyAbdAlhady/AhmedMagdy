@@ -1,0 +1,14 @@
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+  transition: background-color 0.5s ease;
+}
+
+
+.Mainsection{
+  padding: 100px 0;
+}

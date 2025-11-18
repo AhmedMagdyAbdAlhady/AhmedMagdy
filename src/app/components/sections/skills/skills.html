@@ -1,0 +1,44 @@
+<section class="my-3">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-12" data-aos="fade-right" data-aos-delay="100">
+      <div data-aos="fade-up" class="heading-section text-center">
+        <h1 class="big end-0">Skills</h1>
+        <h2><span class="text-orange">M</span>y <span class="text-orange">S</span>kills</h2>
+      </div>
+    </div>
+    <div class="col-12 text-center" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+      <div class="mb-4">
+        <h3><span class="text-orange">T</span>echnical <span class="text-orange">S</span>kills</h3>
+        <h6>Proficient in Front-End Technologies</h6>
+      </div>
+      <p>Here are some of my technical skills and proficiencies in front-end development:</p>
+      <div class="mt-4 row g-3">
+        <app-progress
+          data-aos="fade-up"
+          [attr.data-aos-delay]="(i + 1) * 100"
+          *ngFor="let items of infoTechnicalSkills; let i = index"
+          class="col-12 col-lg-6"
+          [title]="items.title"
+          [EndTarget]="items.percentage"
+        ></app-progress>
+      </div>
+    </div>
+    <div class="col-12 pt-5 text-center">
+      <div class="mb-4" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+        <h3><span class="text-orange">S</span>oft <span class="text-orange">S</span>kills</h3>
+        <!-- <h6>Proficient in Front-End Technologies</h6> -->
+        <p>Here are some of my soft skills and proficiencies in front-end development:</p>
+      </div>
+      <div class="mt-4 row g-3">
+        <app-progress
+          data-aos="fade-up"
+          [attr.data-aos-delay]="(i + 1) * 100"
+          *ngFor="let items of infoSoftSkills; let i = index"
+          class="col-12 col-lg-6"
+          [title]="items.title"
+          [EndTarget]="items.percentage"
+        ></app-progress>
+      </div>
+    </div>
+  </div>
+</section>

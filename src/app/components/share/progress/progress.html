@@ -1,0 +1,31 @@
+<!-- <div class="progress">
+  <div>
+    <p class="">{{ title }}</p>
+    <app-counter
+      [counter]="count"
+      [target]="EndTarget"
+      (targetChange)="onCounterChange($event)"
+    ></app-counter>
+  </div>
+  <div class="counter-display"></div>
+</div> -->
+<div class="progress-wrap row  p-0 ">
+  <h3 class="col-6 text-start">{{ title }}</h3>
+  <h4 class="col-6 text-end">
+    <span class="fs-5">
+      <app-counter
+        [counter]="count"
+        [target]="EndTarget"
+        (targetChange)="onCounterChange($event)"
+      ></app-counter
+      >%</span
+    >
+  </h4>
+  <div class="col-12 ">
+
+    <div class="progress  ">
+      <div class="counter-display progress-bar color-1">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<section class="my-3">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-delay="100">
+      <img src="bg-1.png" alt="image" class="img-fluid" />
+    </div>
+    <div class="col-12 col-lg-6">
+      <div data-aos="fade-up" class="heading-section">
+        <h1 class="big">About</h1>
+        <h2><span class="text-orange">A</span>bout <span class="text-orange">M</span>e</h2>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <div class="mb-4">
+          <h3>
+            <span class="text-orange">W</span>eb <span class="text-orange">D</span>eveloper &
+            <span class="text-orange">F</span>ront-<span class="text-orange">E</span>nd
+            <span class="text-orange">D</span>eveloper
+          </h3>
+          <h6>Specializing in Angular & React</h6>
+        </div>
+        <p>
+          🚀 Motivated and detail-oriented Front-End Developer with a strong foundation in HTML,
+          CSS, JavaScript, and modern frameworks like Angular. Skilled in building responsive,
+          scalable, and user-friendly web applications that deliver seamless digital experiences.
+          Passionate about clean code, performance optimization, and transforming ideas into
+          engaging interfaces. Thrives in Agile teams, values collaboration, and continuously seeks
+          opportunities to learn and grow within dynamic development environments.
+        </p>
+      </div>
+      <div class="col-12" data-aos="fade-left" data-aos-delay="200">
+        <div>
+          <ul class="list-unstyled">
+            <li class="mb-3 row" *ngFor="let i of Info">
+              <span class="col-3 text-white"
+                ><strong>{{ i.title }}:</strong></span
+              ><span class="col-9"> {{ i.value }}</span>
+            </li>
+          </ul>
+         <div class="counter-wrap d-flex mt-md-3">
+      <div class="text ">
+        <p class="mb-4  fs-4">
+          <app-counter class="number text-orange"  [target]="50">0</app-counter>
+          <span> Project complete</span>
+        </p>
+        <p><a href="#" class="btn btn-primary py-3 px-3">Download CV</a></p>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

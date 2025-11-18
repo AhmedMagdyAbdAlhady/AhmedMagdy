@@ -1,0 +1,98 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark sticky-top ftco-navbar-light site-navbar-target"
+  id="ftco-navbar"
+  [ngClass]="{ 'bg-dark0': currentSection !== 'home' }"
+>
+  <div class="container">
+    <!-- <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#ftco-nav"
+      aria-controls="ftco-nav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    > -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+    <span class="navbar-toggler-icon"></span>
+      <span class="bi bi-list"></span> Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav nav m-auto">
+        <li class="nav-item">
+          <a
+            (click)="scrollTo('home')"
+            [class.active]="currentSection === 'home'"
+            class="nav-link"
+            ><span>Home</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            (click)="scrollTo('about')"
+            [class.active]="currentSection === 'about'"
+            class="nav-link"
+            ><span>About</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            (click)="scrollTo('resume')"
+            [class.active]="currentSection === 'resume'"
+            class="nav-link"
+            ><span>Resume</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            (click)="scrollTo('services')"
+            [class.active]="currentSection === 'services'"
+            class="nav-link"
+            ><span>Services</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            (click)="scrollTo('skills')"
+            [class.active]="currentSection === 'skills'"
+            class="nav-link"
+            ><span>Skills</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            (click)="scrollTo('projects')"
+            [class.active]="currentSection === 'projects'"
+            class="nav-link"
+            ><span>Projects</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            (click)="scrollTo('Achievement')"
+            [class.active]="currentSection === 'Achievement'"
+            class="nav-link"
+            ><span>Achievement</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            (click)="scrollTo('contact')"
+            [class.active]="currentSection === 'contact'"
+            class="nav-link"
+            ><span>Contact</span></a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
