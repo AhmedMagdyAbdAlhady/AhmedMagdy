@@ -15,7 +15,10 @@
               data-aos="fade-up"
               [attr.data-aos-delay]="(i + 1) * 100"
             >
-              <a href="{{ item.link }}"><i class="{{ item.icon }}"></i></a>
+              <a href="{{ item.link }}"><i class="{{ item.icon }}"></i>
+                <span class="visually-hidden">{{ item.title }}</span>
+
+              </a>
             </li>
           </ul>
         </div>
@@ -33,7 +36,8 @@
                 href="{{ link.link }}"
                 (click)="scrollTo('{{link.title}}')"
                 [class.active]="currentSection === '{{link.title}}'"
-                ><i class="fa-solid fa-arrow-right"></i>{{ link.title }}</a
+                ><i class="fa-solid fa-arrow-right"></i>{{ link.title }}
+                </a
               >
             </li>
           </ul>

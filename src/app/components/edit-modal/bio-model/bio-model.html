@@ -1,0 +1,22 @@
+<div class="bio-fields">
+  <div *ngFor="let item of currentValues; let i = index; trackBy: trackByIndex" class="d-flex gap-2 mb-2">
+    <label [for]="'bio-input-'+i"></label>
+    <input
+      [id]="'bio-input-' + i"
+      [name]="'bio-input-' + i"
+      class="form-control"
+      type="text"
+      [value]="item"
+      (input)="onInputChange(i, $event)"
+      placeholder="Enter line..."
+    />
+
+    <button type="button" class="btn btn-success" (click)="addField()">+</button>
+
+    <button type="button" class="btn btn-danger"
+            (click)="removeField(i)"
+            [disabled]="currentValues.length === 1">
+      –
+    </button>
+  </div>
+</div>

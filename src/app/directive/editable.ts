@@ -19,7 +19,7 @@ export class EditableDirective {
 
   ngOnInit() {
     this.addEditIcon();
-    this.wrapContent();
+    // this.wrapContent();
 
   }
   ngOnDestroy() {
@@ -123,7 +123,7 @@ console.log(originalText);
   }
   updateText(newValue: string) {
     if (this.textSpan) {
-      this.renderer.setProperty(this.textSpan, 'textContent', newValue);
+      this.renderer.setProperty(this.textSpan, 'textContent', [newValue]);
     }
   }
 

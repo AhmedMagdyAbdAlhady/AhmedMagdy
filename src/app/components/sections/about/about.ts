@@ -1,5 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import * as AOS from 'aos';
+import { Service } from '../../../server/service';
+import { map } from 'rxjs';
 
 @Component({
   standalone: false,
@@ -8,13 +10,16 @@ import * as AOS from 'aos';
   styleUrls: ['./about.css']
 })
 export class About implements AfterViewInit {
+  jobTitle: string[] = [];
+  Info: any
 
-  constructor() { }
-  Info: any = [
-    { title: 'Experience', value: '4+ Years' },
-    { title: 'Phone', value: '0201202266876' },
-    { title: 'Email', value: 'ahmedmagdyabdalhady@gmail.com' }
-  ]
+  constructor(public service: Service) { }
+  ngOnInit() {
+    this.service.userInfo$.subscribe(userInfo => {
+      this.Info = userInfo;
+      this.jobTitle = userInfo.jobTitle?.split(' ') || [];
+    });
+  }
   ngAfterViewInit(): void {
     AOS.init({
       duration: 1000, // مدة الحركة (بالملي ثانية)
@@ -22,8 +27,9 @@ export class About implements AfterViewInit {
     });
     AOS.refresh();
 
+
+
+
+
   }
-  // onCounterChange(newValue: number) {
-  //   console.log('Counter value changed to:', newValue);
-  // }
 }

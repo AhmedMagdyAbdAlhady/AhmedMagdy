@@ -48,6 +48,17 @@ html {
     left: -15px !important;
   }
 }
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
 .text-orange {
     color: #ffbd39;
 }
@@ -57,6 +68,11 @@ html {
 
     &::first-letter {
         color: #ffbd39;
+    }
+    &:first-word {
+        text-transform: uppercase;
+        color: #ffbd39;
+
     }
 }
 
@@ -69,12 +85,12 @@ html {
     font-weight: 700;
 }
 
-.heading-section h1.big {
+.heading-section .big {
     position: absolute;
     top: -0px !important;
     left: 0;
     font-size: 5vw;
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, .35);
     z-index: -1;
     font-weight: 900;
 }

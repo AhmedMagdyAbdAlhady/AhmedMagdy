@@ -4,15 +4,15 @@
   <div class="col-12 col-lg-5 row justify-content-center align-content-center align-items-center">
     <div class="col-12">
       <h1 class="text-center">
-        <span class="firstLetter-orange me-1 " editable="firstName" position="right">{{ Service.userInfo.lastName }}</span>
+        <span class="firstLetter-orange me-1 " editable="firstName"  position="right">{{ Service.userInfo.firstName }}</span>
         <span class="firstLetter-orange" editable="lastName" position="right">{{ Service.userInfo.lastName }}</span>
 
         <!-- <span class="text-orange">A</span>hmed <span class="text-orange">M</span>agdy -->
       </h1>
       <app-auto-type></app-auto-type>
       <p class="text-center">
-        <a href="#" class="btn btn-primary py-3 px-4 me-2" (click)="scrollTo('contact')">Hire me</a>
-        <a href="#" class="btn btn-outline-light py-3 px-4 border border-white">My works</a>
+        <a  class="btn btn-primary py-3 px-5 me-3 " (click)="scrollTo('contact')">Hire me</a>
+        <a  class="btn btn-outline-light py-3 px-5 border border-white" (click)="scrollTo('projects')">My works</a>
       </p>
     </div>
   </div>

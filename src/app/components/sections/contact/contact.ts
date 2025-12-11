@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Service } from '../../../server/service';
 
 @Component({
   selector: 'app-contact',
@@ -7,27 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './contact.css',
 })
 export class Contact {
-  infoContact = [
-    {
-      title: 'Address',
-      description: '198 West 21th Street, Suite 721 New York NY 10016',
-      icon: 'fa-solid fa-signs-post'
-    },
-    {
-      title: 'Phone',
-      description: '+1 5589 55488 55s',
-      icon: 'fa-solid fa-phone'
-    },
-    {
-      title: 'Email',
-      description: 'AhmedMagdyAbdalhady@gmail.com',
-      icon: 'fa-solid fa-envelope'
-    },
-    {
-      title: 'Website',
-      description: 'AhmedMagdyAbdalhady.com',
-      icon: 'fa-solid fa-globe'
-    },
-
+  infoContact: any[] = [
   ]
+  constructor(public Service: Service) { }
+  ngOnInit(): void {
+    this.Service.userInfo$.subscribe(data => {
+      this.infoContact = data.contact;
+    })
+  }
 }

@@ -11,18 +11,22 @@ export class Footer {
     {
       link: 'https://www.facebook.com/ahmed.magdy.9028194',
       icon: 'fa-brands fa-facebook',
+      title: 'Facebook'
     },
     {
       link: 'https://github.com/ahmedmagdy00',
       icon: 'fa-brands fa-github',
+      title: 'GitHub'
     },
     {
       link: 'https://www.linkedin.com/in/ahmed-magdy-566712212/',
       icon: 'fa-brands fa-linkedin',
+      title: 'LinkedIn'
     },
     {
       link: 'https://wa.me/+201024739223',
       icon: 'fa-brands fa-whatsapp',
+      title: 'WhatsApp'
     },
   ];
   links=[

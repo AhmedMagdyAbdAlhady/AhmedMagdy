@@ -1,61 +1,46 @@
-<!-- 1. الخلفية المعتمة -->
-<div class="modal-backdrop fade show" 
-     *ngIf="isModalOpen" 
-     (click)="closeModal()"></div>
 
-<!-- 2. المودال مع إدارة الحالة -->
-<div class="modal fade" 
-     [class.show]="isModalOpen" 
-     [style.display]="isModalOpen ? 'block' : 'none'"
-     tabindex="-1"
-     (keydown)="onKeydown($event)"
-     (click)="closeModal()">
-     
-  <!-- 3. منع الإغلاق عند النقر داخل المحتوى -->
-  <div class="modal-dialog modal-dialog-centered" (click)="onModalContentClick($event)">
-    <div class="modal-content">
+
+<!-- خلفية المودال -->
+
+<div class="modal-backdrop fade show" *ngIf="isModalOpen" (click)="closeModal()"></div>
+
+<!-- المودال -->
+<div
+  class="modal fade"
+  [class.show]="isModalOpen"
+  [style.display]="isModalOpen ? 'block' : 'none'"
+  tabindex="-1"
+  (keydown)="onKeydown($event)"
+  (click)="closeModal()"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <!-- Header -->
       <div class="modal-header">
-        <!-- 4. عنوان ديناميكي -->
-        <h5 class="modal-title">{{ editData.title }}</h5>
-        
-        <!-- 5. زر الإغلاق بـ Angular -->
-        <button type="button" 
-                class="btn-close" 
-                (click)="closeModal()" 
-                aria-label="إغلاق"></button>
+        <h3 class="modal-title text-dark">Edit {{ editData.title }}</h3>
+        <button class="btn-close" (click)="closeModal()"><span class="visually-hidden">close</span></button>
       </div>
-      
+
+      <!-- Body -->
       <div class="modal-body">
-        <!-- 6. حقل الإدخال مع two-way binding -->
-        <div class="mb-3">
-          <label class="form-label">النص:</label>
-          <textarea 
-            class="form-control" 
-            [(ngModel)]="editData.value" 
-            rows="4"
-            placeholder="اكتب النص هنا..."
-            autofocus>
-          </textarea>
+        <!-- ⭐ حالة BIO -->
+        <div *ngIf="editData.fieldKey === 'bio'">
+          <app-bio-model [bio]="bioData" (bioChange)="onBioDataChange($event)"></app-bio-model>
         </div>
-        
-        <!-- 7. معاينة فورية -->
-        <div class="mb-3" *ngIf="editData.value">
-          <label class="form-label">المعاينة:</label>
-          <div class="preview-box p-2 border rounded bg-light">
-            {{ editData.value }}
-          </div>
+        <section *ngIf="editData.fieldKey.includes('image') || editData.fieldKey.includes('product')">
+          <app-image-model [imageData]="editData.value"></app-image-model>
+        </section>
+        <!-- ⭐ باقي الحقول -->
+        <div *ngIf="editData.fieldKey !== 'bio' &&  !editData.fieldKey.includes('image') && !editData.fieldKey.includes('product')">
+          <label for="content-text"></label>
+          <textarea id="content-text" class="form-control" rows="4" [(ngModel)]="editData.value"></textarea>
         </div>
       </div>
-      
+
+      <!-- Footer -->
       <div class="modal-footer">
-        <!-- 8. أزرار بـ Angular events -->
-        <button type="button" 
-                class="btn btn-secondary" 
-                (click)="closeModal()">إلغاء</button>
-                
-        <button type="button" 
-                class="btn btn-primary" 
-                (click)="saveChanges()">حفظ التغييرات</button>
+        <button class="btn btn-secondary" (click)="closeModal()">Close</button>
+        <button class="btn btn-primary" (click)="saveChanges()">Save</button>
       </div>
     </div>
   </div>

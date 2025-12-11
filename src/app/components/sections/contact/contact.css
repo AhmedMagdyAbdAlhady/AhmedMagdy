@@ -1,7 +1,18 @@
 .contact-section .contact-info p a {
     color: #1a1a1a;
 }
+label{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 
+}
 .contact-section .box {
     width: 100%;
     display: block;

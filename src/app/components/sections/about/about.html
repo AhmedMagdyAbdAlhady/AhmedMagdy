@@ -1,7 +1,8 @@
 <section class="my-3">
   <div class="row justify-content-center align-items-center">
-    <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-delay="100">
-      <img src="bg-1.png" alt="image" class="img-fluid" />
+    <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-delay="100" editable="image1" position="top">
+      <!-- <img [src]="Info.image1" alt="image" class="img-fluid" /> -->
+      <img class="img-fluid" [src]="Info.image1" alt="Uploaded Image Preview" >
     </div>
     <div class="col-12 col-lg-6">
       <div data-aos="fade-up" class="heading-section">
@@ -10,38 +11,41 @@
       </div>
       <div data-aos="fade-up" data-aos-delay="200">
         <div class="mb-4">
-          <h3>
-            <span class="text-orange">W</span>eb <span class="text-orange">D</span>eveloper &
-            <span class="text-orange">F</span>ront-<span class="text-orange">E</span>nd
-            <span class="text-orange">D</span>eveloper
+          <h3 class="first-word-orange" editable="jobTitle"  position="right"> 
+            <span *ngFor="let item of jobTitle" class="firstLetter-orange me-1" >{{ item }}</span>
           </h3>
-          <h6>Specializing in Angular & React</h6>
+          <h4 editable="subJobTitle"  position="right">{{Info.subJobTitle||'your sub job title here'}}</h4>
         </div>
-        <p>
-          🚀 Motivated and detail-oriented Front-End Developer with a strong foundation in HTML,
-          CSS, JavaScript, and modern frameworks like Angular. Skilled in building responsive,
-          scalable, and user-friendly web applications that deliver seamless digital experiences.
-          Passionate about clean code, performance optimization, and transforming ideas into
-          engaging interfaces. Thrives in Agile teams, values collaboration, and continuously seeks
-          opportunities to learn and grow within dynamic development environments.
+        <p editable="summary"  position="right">
+          {{Info.summary||"'your summary here'" }}
         </p>
       </div>
       <div class="col-12" data-aos="fade-left" data-aos-delay="200">
         <div>
           <ul class="list-unstyled">
-            <li class="mb-3 row" *ngFor="let i of Info">
-              <span class="col-3 text-white"
-                ><strong>{{ i.title }}:</strong></span
-              ><span class="col-9"> {{ i.value }}</span>
-            </li>
+              <li class="mb-3 row" editable="Experience"  position="right">
+                <span class="col-3 text-white"
+                  ><strong>Experience:</strong></span
+                ><span class="col-9"> {{ Info.Experience|| "experience years" }}</span>
+              </li>
+              <li class="mb-3 row" editable="Phone"  position="right">
+                <span class="col-3 text-white"
+                  ><strong>Phone:</strong></span
+                ><span class="col-9"> {{ Info.Phone|| "phone number" }}</span>
+              </li>
+              <div class=" mb-3 row" editable="Email"  position="inside">
+                <span class="col-3 text-white"
+                  ><strong>Email:</strong></span
+                ><span class="col-9"> {{ Info.Email|| "email@example.com" }}</span>
+              </div>
           </ul>
          <div class="counter-wrap d-flex mt-md-3">
       <div class="text ">
-        <p class="mb-4  fs-4">
-          <app-counter class="number text-orange"  [target]="50">0</app-counter>
+        <h4 class="mb-4  fs-4">
+          <app-counter editable="projectsCompleted"  position="left" class="number text-orange"  [target]="Info.projectsCompleted">0</app-counter>
           <span> Project complete</span>
-        </p>
-        <p><a href="#" class="btn btn-primary py-3 px-3">Download CV</a></p>
+        </h4>
+        <p editable="Email"  position="right"><a href="{{Info.dowenloadCVLink}}" class="btn btn-primary py-3 px-3">Download CV</a></p>
       </div>
     </div>
         </div>

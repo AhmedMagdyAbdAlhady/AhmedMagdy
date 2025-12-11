@@ -24,7 +24,6 @@ export class Counter {
       if (this.counter > this.target) return;
       if (this.counter < 0) this.counter = 0;
       if (this.target < 0) this.target = 0;
-      console.log(((this.target / speed)) % 2);
       if (((this.target / speed)) % 2 == 0 ) {
         increment = Math.floor((this.target / speed));
       }else {

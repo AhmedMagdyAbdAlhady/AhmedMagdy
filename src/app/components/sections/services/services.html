@@ -12,7 +12,7 @@
       <div class="col-md-4 text-center d-flex " *ngFor="let service of services ; let i = index" data-aos="fade-up" [attr.data-aos-delay]="(i + 1) * 100">
         <a id="{{i}}" href="{{ service.link }}" class="services-1 ">
           <span class="icon d-block mb-3">
-            <i class="{{service.icon}} fs-1"></i>
+            <i class="{{service?.icon}} fs-1"></i>
           </span>
           <div class="desc mb-5 ">
             <h3 class="mb-5">{{ service.title }}</h3>

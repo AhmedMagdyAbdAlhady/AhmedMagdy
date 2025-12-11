@@ -19,9 +19,13 @@ import { Contact } from './components/sections/contact/contact';
 import { Footer } from './components/footer/footer';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { EditModalComponent } from './components/edit-modal/edit-modal';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { EditableDirective } from './directive/editable';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { BioModel } from './components/edit-modal/bio-model/bio-model';
+import { ImageModel } from './components/edit-modal/image-model/image-model';
 
 @NgModule({
   declarations: [
@@ -42,14 +46,19 @@ import { EditableDirective } from './directive/editable';
     Footer,
     Dashboard,
     EditModalComponent,
-    EditableDirective
+    EditableDirective,
+    BioModel,
+    ImageModel
 
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA], // ✅ أضف هذا السطر هنا فقط
   providers: [

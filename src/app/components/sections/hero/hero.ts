@@ -17,6 +17,5 @@ export class Hero {
   }
   ngOnInit(){
   this.user= this.Service.userInfo;
-    console.log(this.Service.userInfo);
   }
 }

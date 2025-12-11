@@ -1,0 +1,8 @@
+
+  <label for="img">Select image:</label>
+  <!-- <input type="file" id="img" name="img" accept="image/*"> -->
+  <!-- <button class="btn btn-secondary mt-2" (click)="clearImage()">Clear Image</button> -->
+<!-- <img    class="w-100" src="{{imageSrc}}" alt=""> -->
+ <label for="image-input"></label>
+<input id="image-input" type="file" (change)="Service.onFileSelected($event)" accept="image/*" #fileInput>
+<img [src]="Service.ModelImageSrc || 'placeholder.jpg'" alt="Uploaded Image Preview" *ngIf="Service.ModelImageSrc" style="max-width: 300px; margin-top: 10px;">

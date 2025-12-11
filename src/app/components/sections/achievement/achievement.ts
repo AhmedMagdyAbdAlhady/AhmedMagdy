@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Service } from '../../../server/service';
 
 @Component({
   selector: 'app-achievement',
@@ -8,21 +9,10 @@ import { Component } from '@angular/core';
 })
 export class Achievement {
 infoAchievement: any[] = [
-  {
-    title: 'Awards',
-    count:50,
-  },
-  {
-    title: 'Complete Projects',
-    count:1200,
-  },
-  {
-    title:"Happy Customers",
-    count:1200,
-  },
-  {
-    title:"Certifications ",
-    count:50,
-  },
 ]
-}
+constructor(private service: Service) { }
+ngOnInit(): void {
+  this.service.userInfo$.subscribe(data => {
+    this.infoAchievement = data.achievement;
+  })
+}}
