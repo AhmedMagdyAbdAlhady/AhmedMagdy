@@ -18,10 +18,10 @@ a{
 @media (max-width: 991.98px) {
     .ftco-navbar-light {
         background: #000000 !important;
-        position: relative;
+        /* position: relative;
         top: 0;
         padding-top: 0;
-        padding-bottom: 0;
+        padding-bottom: 0; */
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -182,8 +182,10 @@ a{
 .ftco-navbar-light .navbar-toggler:hover,
 .ftco-navbar-light .navbar-toggler:focus {
     text-decoration: none;
-    color: #ffbd39;
+    color: #ffbd39 !important;
     outline: none !important;
+     box-shadow: none !important;
+
 }
 
 .ftco-navbar-light.scrolled {

@@ -1,5 +1,5 @@
 <nav
-  class="navbar navbar-expand-lg navbar-dark sticky-top ftco-navbar-light site-navbar-target"
+  class="navbar navbar-expand-lg navbar-dark fixed-top ftco-navbar-light site-navbar-target"
   id="ftco-navbar"
   [ngClass]="{ 'bg-dark0': currentSection !== 'home' }"
 >
@@ -14,7 +14,7 @@
       aria-label="Toggle navigation"
     > -->
     <button
-      class="navbar-toggler py-3"
+      class="navbar-toggler py-3 sticky-top"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarNav"
@@ -26,7 +26,7 @@
       <span class="bi bi-list"></span> Menu
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse ps-4 ps-md-0" id="navbarNav">
       <ul class="navbar-nav nav m-auto">
         <li class="nav-item">
           <a
