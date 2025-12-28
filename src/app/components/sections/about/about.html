@@ -2,12 +2,12 @@
   <div class="row justify-content-center align-items-center">
     <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-delay="100" editable="image1" position="top">
       <!-- <img [src]="Info.image1" alt="image" class="img-fluid" /> -->
-      <img class="img-fluid" [src]="Info.image1" alt="Uploaded Image Preview" >
+      <img class="img-fluid" [src]="Info.image1" alt="Uploaded Image Preview" loading="lazy" >
     </div>
-    <div class="col-12 col-lg-6">
-      <div data-aos="fade-up" class="heading-section">
+    <div class="col-12 col-lg-6 ">
+      <div data-aos="fade-up" class="heading-section row justify-content-center justify-content-md-start text-center text-md-start mb-4 mt-4 mt-md-0">
         <h1 class="big">About</h1>
-        <h2><span class="text-orange">A</span>bout <span class="text-orange">M</span>e</h2>
+        <h2  class=""><span class="text-orange">A</span>bout <span class="text-orange">M</span>e</h2>
       </div>
       <div data-aos="fade-up" data-aos-delay="200">
         <div class="mb-4">
@@ -45,7 +45,7 @@
           <app-counter editable="projectsCompleted"  position="left" class="number text-orange"  [target]="Info.projectsCompleted">0</app-counter>
           <span> Project complete</span>
         </h4>
-        <p editable="Email"  position="right"><a href="{{Info.dowenloadCVLink}}" class="btn btn-primary py-3 px-3">Download CV</a></p>
+        <div editable="Email"  position="right" class="row justify-content-center align-items-center"><a href="{{Info.dowenloadCVLink}}" class="btn btn-primary py-3 px-3">Download CV</a></div>
       </div>
     </div>
         </div>

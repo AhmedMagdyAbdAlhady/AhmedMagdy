@@ -560,10 +560,12 @@ ftco-section
 }
 
 @media (max-width: 767.98px) {
+
     .slider-text h1 {
         font-size: 40px;
     }
-
+.heading-section .big, #spline {
+display: none;}
     .heading-section h2 {
         font-size: 38px;
     }
