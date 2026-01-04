@@ -2,52 +2,52 @@
   <div class="row justify-content-center align-items-center">
     <div class="col-12 col-lg-6" data-aos="fade-right" data-aos-delay="100" editable="image1" position="top">
       <!-- <img [src]="Info.image1" alt="image" class="img-fluid" /> -->
-      <img class="img-fluid" [src]="Info.image1" alt="Uploaded Image Preview" loading="lazy" >
+      <img class="img-fluid" [src]="Info.image1" alt="Uploaded Image Preview" loading="lazy" decoding="async">
     </div>
     <div class="col-12 col-lg-6 ">
-      <div data-aos="fade-up" class="heading-section row justify-content-center justify-content-md-start text-center text-md-start mb-4 mt-4 mt-md-0">
+      <div data-aos="fade-up"
+        class="heading-section row justify-content-center justify-content-md-start text-center text-md-start mb-4 mt-4 mt-md-0">
         <h1 class="big">About</h1>
-        <h2  class=""><span class="text-orange">A</span>bout <span class="text-orange">M</span>e</h2>
+        <h2 class=""><span class="text-orange">A</span>bout <span class="text-orange">M</span>e</h2>
       </div>
       <div data-aos="fade-up" data-aos-delay="200">
         <div class="mb-4">
-          <h3 class="first-word-orange" editable="jobTitle"  position="right"> 
-            <span *ngFor="let item of jobTitle" class="firstLetter-orange me-1" >{{ item }}</span>
+          <h3 class="first-word-orange" editable="jobTitle" position="right">
+            <span *ngFor="let item of jobTitle" class="firstLetter-orange me-1">{{ item }}</span>
           </h3>
-          <h4 editable="subJobTitle"  position="right">{{Info.subJobTitle||'your sub job title here'}}</h4>
+          <h4 editable="subJobTitle" position="right">{{Info.subJobTitle||'your sub job title here'}}</h4>
         </div>
-        <p editable="summary"  position="right">
+        <p editable="summary" position="right">
           {{Info.summary||"'your summary here'" }}
         </p>
       </div>
       <div class="col-12" data-aos="fade-left" data-aos-delay="200">
         <div>
           <ul class="list-unstyled">
-              <li class="mb-3 row" editable="Experience"  position="right">
-                <span class="col-3 text-white"
-                  ><strong>Experience:</strong></span
-                ><span class="col-9"> {{ Info.Experience|| "experience years" }}</span>
-              </li>
-              <li class="mb-3 row" editable="Phone"  position="right">
-                <span class="col-3 text-white"
-                  ><strong>Phone:</strong></span
-                ><span class="col-9"> {{ Info.Phone|| "phone number" }}</span>
-              </li>
-              <div class=" mb-3 row" editable="Email"  position="inside">
-                <span class="col-3 text-white"
-                  ><strong>Email:</strong></span
-                ><span class="col-9"> {{ Info.Email|| "email@example.com" }}</span>
-              </div>
+            <li class="mb-3 row" editable="Experience" position="right">
+              <span class="col-3 text-white"><strong>Experience:</strong></span><span class="col-9"> {{
+                Info.Experience|| "experience years" }}</span>
+            </li>
+            <li class="mb-3 row" editable="Phone" position="right">
+              <span class="col-3 text-white"><strong>Phone:</strong></span><span class="col-9"> {{ Info.Phone|| "phone
+                number" }}</span>
+            </li>
+            <div class=" mb-3 row" editable="Email" position="inside">
+              <span class="col-3 text-white"><strong>Email:</strong></span><span class="col-9"> {{ Info.Email||
+                "email@example.com" }}</span>
+            </div>
           </ul>
-         <div class="counter-wrap d-flex mt-md-3">
-      <div class="text ">
-        <h4 class="mb-4  fs-4">
-          <app-counter editable="projectsCompleted"  position="left" class="number text-orange"  [target]="Info.projectsCompleted">0</app-counter>
-          <span> Project complete</span>
-        </h4>
-        <div editable="Email"  position="right" ><a href="{{Info.dowenloadCVLink}}" class="btn btn-primary  py-3 px-5">Download CV</a></div>
-      </div>
-    </div>
+          <div class="counter-wrap d-flex mt-md-3">
+            <div class="text ">
+              <h4 class="mb-4  fs-4">
+                <app-counter editable="projectsCompleted" position="left" class="number text-orange"
+                  [target]="Info.projectsCompleted">0</app-counter>
+                <span> Project complete</span>
+              </h4>
+              <div editable="Email" position="right"><a href="{{Info.dowenloadCVLink}}"
+                  class="btn btn-primary  py-3 px-5">Download CV</a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
