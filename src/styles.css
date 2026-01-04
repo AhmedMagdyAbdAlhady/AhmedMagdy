@@ -16,6 +16,7 @@ html {
     padding: 0;
         overflow-x: hidden;
 }
+
 .edit-icon {
   transition: all 0.3s ease;
 }
@@ -616,3 +617,4 @@ display: none;}
         box-shadow: 0 0 0 0 rgba(255, 189, 57, 0);
     }
 }
+
