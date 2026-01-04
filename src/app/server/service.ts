@@ -12,7 +12,7 @@ export class Service {
   api: string = 'http://localhost:3000';
 
   userInfo: any = {
-    image1: 'my-photo/bg-1.png',
+    image1: 'my-photo/bg-1.webp',
     image2: 'my-photo/photo-1.png',
     poductimge: [
       'product-1.png',
