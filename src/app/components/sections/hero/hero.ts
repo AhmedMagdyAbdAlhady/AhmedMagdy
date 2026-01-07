@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Service } from '../../../server/service';
 
 @Component({
@@ -6,6 +6,7 @@ import { Service } from '../../../server/service';
   standalone: false,
   templateUrl: './hero.html',
   styleUrl: './hero.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Hero {
   user:any;

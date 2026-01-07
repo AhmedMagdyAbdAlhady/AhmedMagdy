@@ -21,12 +21,6 @@ export class AutoType {
     this.sub = this.Service.bio$.subscribe(bio => {
       this.startTyping(bio);
     });
-
-    // ⬅⬅ إضافة CSS
-    const css = document.createElement('style');
-    css.type = 'text/css';
-    css.innerHTML = '.txt-rotate > .wrap { border-right: 0.08em solid #666 }';
-    document.body.appendChild(css);
   }
 
   startTyping(textArray: string[]) {
