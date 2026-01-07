@@ -13,11 +13,11 @@ export class Service {
 
   userInfo: any = {
     image1: 'my-photo/bg-1.webp',
-    image2: 'my-photo/photo-1.png',
+    image2: 'my-photo/photo-1.jpg',
     poductimge: [
-      'product-1.png',
-      'product-2.png',
-      'product-3.png'
+      'product-1.jpg',
+      'product-2.jpg',
+      'product-3.jpg'
     ],
 
     dowenloadCVLink: 'https://drive.google.com/file/d/19le_OXMC7D7d4PaFuh_Qc0r0RNhyEDXk/view?usp=sharing',
@@ -133,21 +133,21 @@ export class Service {
     projects: [
       {
         col: 4,
-        img: "project-2.png",
+        img: "project-2.jpg",
         link: "/project-2",
         title: "Web Design",
         description: "Branding & Illustration Design",
       },
       {
         col: 8,
-        img: "project-3.png",
+        img: "project-3.jpg",
         link: "/project-3",
         title: "Web Design",
         description: "Branding & Illustration Design",
       },
       {
         col: 8,
-        img: "project-4.png",
+        img: "project-4.jpg",
         link: "/project-4",
         title: "Web Design",
         description: "Branding & Illustration Design",
@@ -168,7 +168,7 @@ export class Service {
       },
       {
         col: 4,
-        img: "project-6.png",
+        img: "project-6.jpg",
         link: "/project-6",
         title: "Web Design",
         description: "Branding & Illustration Design",

@@ -1,0 +1,7 @@
+h2 {
+  min-height: 40px;
+}
+
+:host ::ng-deep .txt-rotate > .wrap { 
+  border-right: 0.08em solid #666;
+}

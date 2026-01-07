@@ -8,13 +8,13 @@
 
    }
 .hight-control {
-           height: 100vh ;
+           min-height: 100vh ;
        }
-   @media (max-width: 767.98px) {
+   /* @media (max-width: 767.98px) {
        .hight-control {
-           height: auto ;
+            min-height: auto ;
        }
-   }
+   } */
   .fixed-letter {
   
   color: #ffbd39;
